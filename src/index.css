@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+Ajánlott CSS beállítások (nyugodtan kitörölheted, ha más megoldásokat szeretnél használni)
+További információ: https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+/*
+  2. Remove default margin
+*/
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+  .checkbox-wrapper-22 .switch {
+    display: inline-block;
+    height: 25px;
+    position: relative;
+    width: 50px;
+  }
+
+  .checkbox-wrapper-22 .switch input {
+    display:none;
+  }
+
+  .checkbox-wrapper-22 .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+
+  .checkbox-wrapper-22 .slider:before {
+    background-color: #fff;
+    content: "";
+    top: 0.5px;
+    height: 24px;
+    position: absolute;
+    transition: .4s;
+    width: 24px;
+  }
+
+  .checkbox-wrapper-22 input:checked + .slider {
+    @apply bg-green-500;
+  }
+
+  .checkbox-wrapper-22 input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+
+  .checkbox-wrapper-22 .slider.round {
+    border-radius: 34px;
+  }
+
+  .checkbox-wrapper-22 .slider.round:before {
+    border-radius: 50%;
+  }
+
+  #new-tab 
+  {
+    width: 33px;
+    height: 33px;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  .active{
+    @apply bg-green-400;
+  }
+
+  input[type='range'] {
+    -webkit-appearance: none; 
+   height: 7px; 
+   background: grey; 
+   border-radius: 5px;
+   @apply bg-gradient-to-r from-gray-600 to-green-400; 
+   background-repeat: no-repeat; 
+   }
+
+   input[type='range']::-webkit-slider-thumb { 
+    -webkit-appearance: none; 
+    height: 15px; 
+    width: 15px; 
+    border-radius: 50%; 
+    @apply bg-green-400;
+    @apply outline;
+    @apply outline-1;
+    cursor: pointer; 
+    box-shadow: 0 0 2px 0 #555; 
+    }
+
+    input[type="range"]::-webkit-slider-runnable-track { 
+      -webkit-appearance: none; 
+      box-shadow: none; 
+      border: none; 
+      background: transparent; 
+      }
